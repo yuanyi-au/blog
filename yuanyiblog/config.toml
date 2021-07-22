@@ -1,6 +1,4 @@
-baseURL = "http://yuanyi-au.github.io/"
-relativeURLs = true
-uglyURLs = true
+# baseURL = "http://yuanyi-au.github.io/"
 
 languageCode = "zh"
 title = "yuanyi 的博客"
