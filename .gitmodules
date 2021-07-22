@@ -1,0 +1,4 @@
+[submodule "yuanyiblog/public"]
+	path = yuanyiblog/public
+	url = https://github.com/yuanyi-au/yuanyi-au.github.io.git
+	branch = main
