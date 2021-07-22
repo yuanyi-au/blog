@@ -1,4 +1,7 @@
 baseURL = "http://yuanyi-au.github.io/"
+relativeURLs = true
+uglyURLs = true
+
 languageCode = "zh"
 title = "yuanyi 的博客"
 theme = "color-your-world"
