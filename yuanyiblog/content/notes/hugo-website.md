@@ -97,3 +97,31 @@ title = "Blog"
 注意：在 `_index.md` 中的内容永远都会依照 list 模板渲染，而非 single
 
 # 站点部署
+
+## 把网站部署到 GitHub 上
+
+
+
+## Public 文件夹渲染问题
+
+问题描述：`hugo server` 在本地运行时没有任何问题，但部署上线后打开网页发现渲染缺失 css 和 js 文件
+
+搜索到别人提的 [issue](https://github.com/matcornic/hugo-theme-learn/issues/125)，问题出在 Hugo 本身处理 URL 的方式上。
+
+解决方法：
+
+```
+baseURL = "//example.org"
+relativeURLs = true
+uglyURLs = true
+```
+我尝试了没有用，最后直接把 `baseURL` 注释掉，再运行就没问题了
+
+
+# 参考链接
+
+Hugo 官网上的视频教程，比较详细 [ YouTube Playlist ](https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
+
+如何创建自己的 Hugo 主题 [Creating your own Hugo Theme!](https://www.youtube.com/watch?v=wcMqrb3v2SM&list=LLm-KB0VAVChbSZPeDA_WqSg)
+
+如何把个人博客部署到 GitHub 上 [Creating a Blog with Hugo and Github in 10 minutes](https://www.youtube.com/watch?v=LIFvgrRxdt4&t=247s)

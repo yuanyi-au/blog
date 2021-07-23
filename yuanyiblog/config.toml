@@ -19,12 +19,9 @@ enableInlineShortcodes = true
   
   [params.contact]
     
-    # formspree.io Form ID
-    formspreeFormId = "example"
-    
     # Autocomplete [on/off] and min character length for message
     autoComplete      = false # Default is false
-    messageMinLength  = 20   # Default is 140
+    messageMinLength  = 10   # Default is 140
     
     # Subject
     # You can set a single value below (and it will cease to be a dropdown),
