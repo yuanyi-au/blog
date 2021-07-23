@@ -19,6 +19,9 @@ enableInlineShortcodes = true
   
   [params.contact]
     
+    # formspree.io Form ID
+    formspreeFormId = "xqkwdoba"
+    
     # Autocomplete [on/off] and min character length for message
     autoComplete      = false # Default is false
     messageMinLength  = 10   # Default is 140
