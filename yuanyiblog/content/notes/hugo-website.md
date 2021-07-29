@@ -9,11 +9,11 @@ weight: 10
     
 最简单的方法是直接下载 [最新版本的 hugo](https://github.com/gohugoio/hugo/releases) 安装
 
-建议安装 extended 版本，可以对 scss 文件进行编译，否则在之后使用模板时会出现问题
+直接安装 extended 版本，可以对 scss 文件进行编译，否则在之后使用模板时会出现问题
 
 注意：要把 hugo 的路径添加到环境变量 Path 中！
 
-*我在下载安装扩展版本的时候有点问题，最后重新用 [Chocolatey](https://gohugo.io/getting-started/installing/#chocolatey-windows) 安装，也很方便大家可以试试*
+    我在下载安装扩展版本的时候有点问题，最后重新用 [Chocolatey](https://gohugo.io/getting-started/installing/#chocolatey-windows) 安装成功
 
 ## MacOS：
 
@@ -82,8 +82,16 @@ title = "Blog"
 ## 使用现有主题
 
 1. 在 [Hugo 官网](https://themes.gohugo.io/) 或者 GitHub 上寻找合适的 Hugo 主题
+
 2. 进入 `themes` 文件夹，`git clone` 想要使用的主题
+
 3. 在配置文件中添加主题：`theme = "themename"`
+
+### 现有主题模板的个性化
+
+在`themes`文件夹里主要修改 `assets` 和 `layouts` 两个文件夹，前者主要存放 css 和 js 文件，后者主要存放 html 文件
+
+`layouts` 文件夹里主要修改 `partials` 和 `shortcodes` 文件夹里的 html 文件
 
 ## 自己创建主题
 
@@ -91,7 +99,6 @@ title = "Blog"
 
 2. 在 `_default` 文件夹中创建 `single.html` 和 `list.html` 文件
     
-
 3. 在 `static` 文件夹中创建 `css` 文件定义样式
 
 注意：在 `_index.md` 中的内容永远都会依照 list 模板渲染，而非 single
@@ -100,13 +107,27 @@ title = "Blog"
 
 ## 把网站部署到 GitHub 上
 
+1. 在 GitHub 上创建一个新仓库，名字随便起（例如 blog），用于存放完整的代码。
 
+2. 创建另一个新仓库，起名为 `github_id.github.io` （例如 yuanyi-au.github.io ），该仓库用于网站部署
 
-## Public 文件夹渲染问题
+3. 将本地代码与 GitHub 第一个仓库关联
+
+4. 进入本地代码文件根目录：
+
+`git submodule add -b main <第二个仓库的地址> public` 
+
+生成 `public` 文件夹并将其关联到第二个仓库上，push 之后可以在 GitHub 第二个仓库页面上看到 `public` 文件夹的内容
+
+5. 在第二个仓库的设置中可以找到 GitHub Pages，可以看到网站地址，也就是 `github_id.github.io`，就可以进行访问了
+
+# 过程中遇到的问题
+
+## Public 文件夹渲染出错
 
 问题描述：`hugo server` 在本地运行时没有任何问题，但部署上线后打开网页发现渲染缺失 css 和 js 文件
 
-搜索到别人提的 [issue](https://github.com/matcornic/hugo-theme-learn/issues/125)，问题出在 Hugo 本身处理 URL 的方式上。
+搜索到别人提的 [issue](https://github.com/matcornic/hugo-theme-learn/issues/125) ,问题出在 Hugo 本身处理 URL 的方式上。
 
 解决方法：
 
@@ -115,8 +136,8 @@ baseURL = "//example.org"
 relativeURLs = true
 uglyURLs = true
 ```
-我尝试了没有用，最后直接把 `baseURL` 注释掉，再运行就没问题了
 
+我尝试了没有用，简书上有人说可以直接把 `baseURL` 注释掉，我试了确实可行
 
 # 参考链接
 
