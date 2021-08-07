@@ -19,6 +19,20 @@ netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的�
 
 [常见框架对应的 Build command 和 Publish directory](https://docs.netlify.com/configure-builds/common-configurations/)
 
+## 环境变量
+
+如果第一次 deploy 失败，首先查看版本是否正确
+
+`Site settings > Build & deploy > Environment > Environment variables`
+
+![](netlify-4.png)
+
+## 修改域名
+
+netlify 会自动以你的 site name 生成一个域名：`[name-of-your-site].netlify.app`
+
+进入 `Domain Setting > Domain management > Custom domains`，可以通过修改 site name 修改域名
+
 ## 为 PR 生成预览
 
 进入 `Site settings > Build & deploy > Deploy notifications`
@@ -29,13 +43,7 @@ netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的�
 
 ![](netlify-2.png)
 
-现在每个新出现的 PR 都会自动生成一个评论，包含预览链接
-
-## 修改域名
-
-netlify 会自动以你的 site name 生成一个域名：`[name-of-your-site].netlify.app`
-
-进入 `Domain Setting > Domain management > Custom domains`，可以通过修改 site name 修改域名
+现在每个新出现的 PR 都会自动生成一个评论，包含预览链接 `deploy-preview-4--yoursitename.netlify.app`
 
 ![](netlify-3)
 

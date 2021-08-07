@@ -13,9 +13,9 @@ weight: 10
 
 直接安装 extended 版本，可以对 scss 文件进行编译，否则在之后使用模板时会出现问题
 
-注意：要把 hugo 的路径添加到环境变量 Path 中！
+**注意：要把 hugo 的路径添加到环境变量 Path 中！**
 
-    我在下载安装扩展版本的时候有点问题，最后重新用 [Chocolatey](https://gohugo.io/getting-started/installing/#chocolatey-windows) 安装成功
+我在下载安装扩展版本的时候有点问题，最后重新用 [Chocolatey](https://gohugo.io/getting-started/installing/#chocolatey-windows) 安装成功
 
 ## MacOS：
 
@@ -42,11 +42,13 @@ weight: 10
 ```
 
 ## `content` 文件夹
+
 存放网站的主要内容 md 文件
 
 在该文件夹下的文件结构目录直接对应网站结构
 
 通常md文件开头如下（一般可以在 `archetypes` 文件夹中找到）：
+
 ```
 ---
 title: "Helloworld"
@@ -54,15 +56,19 @@ date: {{ .Date }}
 draft: true
 ---
 ```
+
 除了 `title` 必需，其他可以省略
 
 ## `layouts` 文件夹
+
 存放网站 HTML 模板，包括 index、particials、single page、list pages 等
 
 ## `themes`文件夹
+
 存放现有的 Hugo 主题模板
 
 ## `config.toml` 文件
+
 配置文件，最基础的设置如下：
 ```
 baseURL = "http://example.org/"
@@ -123,15 +129,23 @@ title = "Blog"
 
 5. 在第二个仓库的设置中可以找到 GitHub Pages，可以看到网站地址，也就是 `github_id.github.io`，就可以进行访问了
 
-# 过程中遇到的问题
+**注意：`public` 文件夹的内容需要每次在项目根目录执行 `hugo` 命令后才会更新**
+
+## 把网站部署到 Netlify 上
+
+可以参考这篇笔记 [使用 netlify 预览 GitHub 上的 PR]() ，不做最后一步就行啦
+
+# 搭建过程中遇到的问题
 
 ## Public 文件夹渲染出错
 
-问题描述：`hugo server` 在本地运行时没有任何问题，但部署上线后打开网页发现渲染缺失 css 和 js 文件
+问题描述：
 
-搜索到别人提的 [issue](https://github.com/matcornic/hugo-theme-learn/issues/125) ,问题出在 Hugo 本身处理 URL 的方式上。
+`hugo server` 在本地运行时没有任何问题，但部署上线后打开网页发现渲染缺失 css 和 js 文件
 
-解决方法：
+问题解决：
+
+问题出在 Hugo 本身处理 URL 的方式上，可以参见 [issue](https://github.com/matcornic/hugo-theme-learn/issues/125) 
 
 ```
 baseURL = "//example.org"
@@ -139,9 +153,13 @@ relativeURLs = true
 uglyURLs = true
 ```
 
-我尝试了没有用，简书上有人说可以直接把 `baseURL` 注释掉，我试了确实可行
+上面的方法没有解决我的问题，后来试了两种方法可行：
 
-# 参考链接
+`# baseURL = "example.org"`
+
+`baseURL = "\"`
+
+# 参考资料
 
 Hugo 官网上的视频教程，比较详细 [ YouTube Playlist ](https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
 

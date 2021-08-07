@@ -1,18 +1,11 @@
 ---
-title: " LeetCode 刷题经验"
+title: " LeetCode 刷题记录"
 weight: 200
 ---
 
-# 准备
+# 数据结构
 
-
-# 刷题顺序
-
-只刷easy，数据结构每个专题10道，算法每个专题5道，一共80道，每天10道，8天刷完
-
-## 数据结构
-
-### 数组
+## 数组
 
 [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array)
 
@@ -28,7 +21,15 @@ weight: 200
 
 [转置矩阵](https://leetcode-cn.com/problems/transpose-matrix/)
 
-### 链表
+[搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
+
+[存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)
+
+[数组的度](https://leetcode-cn.com/problems/degree-of-an-array/)
+
+[数组的相对排序](https://leetcode-cn.com/problems/relative-sort-array/)
+
+## 链表
 
 [反转链表](https://leetcode-cn.com/problems/reverse-integer)
 
@@ -38,21 +39,31 @@ weight: 200
 
 [删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 
-[ 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)
+[相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)
 
-### 哈希表
+[移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)
+
+[删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)
+
+## 哈希表
 
 [两数之和](https://leetcode-cn.com/problems/two-sum)
 
 [罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)
 
-### 字符串
+[多数元素](https://leetcode-cn.com/problems/majority-element/)
+
+## 字符串
 
 [字符串相加](https://leetcode-cn.com/problems/add-strings)
 
 [最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)
 
-### 栈与队列
+[验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
+
+[反转字符串](https://leetcode-cn.com/problems/reverse-string/)
+
+## 栈与队列
 
 [有效的括号](https://leetcode-cn.com/problems/valid-parentheses)
 
@@ -60,7 +71,11 @@ weight: 200
 
 [最小栈](https://leetcode-cn.com/problems/min-stack/)
 
-### 树
+[用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
+
+[ 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
+
+## 树
 
 [二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 
@@ -68,15 +83,29 @@ weight: 200
 
 [对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)
 
+[合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)
+
+[平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)
+
 [二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
 
-## 算法
+[二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)
 
-### 排序
+[二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 
-### 贪心
+[二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
 
-### 动态规划
+[二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)
+
+[路径总和](https://leetcode-cn.com/problems/path-sum/)
+
+# 算法
+
+## 排序
+
+## 贪心
+
+## 动态规划
 
 [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs)
 
@@ -84,6 +113,4 @@ weight: 200
 
 [杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)
 
-### 回溯
-
-暂时未归类：整数反转 回文数
+## 回溯
