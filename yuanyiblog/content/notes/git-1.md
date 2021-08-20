@@ -1,5 +1,5 @@
 ---
-title: "git 笔记(1) 基础入门"
+title: "git 笔记 (1)"
 weight: 40
 ---
 
@@ -90,10 +90,91 @@ remote 远程仓库
 
 # `commit message` 规范
 
+![不同的 commit message 规范](https://d33wubrfki0l68.cloudfront.net/eb16595d0c6862c0c013a36c339317a4d82bdce7/9195b/images/posts/2019-11-01-understanding-semantic-commit-messages-using-git-and-angular/conventions-diagram.png)
 
+通常我们都用 Angular 的规范，具体可以参见 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
+## 组成
+
+commit message 包括三部分：header，body 和 footer
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Header
+
+- type：用于说明 commit 的类别
+    - feat：增加新功能
+	- fix：修 bug
+	- docs：文档变动
+	- style：格式变动，不改变代码逻辑
+	- refactor：重构（既非feat又非fix的影响代码运行的改动）
+	- test：增加测试
+	- chore(or build)：构建过程或辅助工具变动
+	- ci：与持续集成相关的变动
+	- perf：改善性能
+- scope：用于说明 commit 影响的范围，例如数据层、控制层、视图层等
+- subject：用于描述 commit 目的
+
+### Body
+
+对 commit 的详细描述，可以分成多行
+
+### Footer
+
+只用于两种情况：
+
+- 当前代码与上一版本代码不兼容，则 footer 以 BREAKING CHANGE 开头，接着描述变动的内容、理由及迁移方法
+- 针对某个 Issue，可以在 footer 部分关闭这个 Issue `Close #65 #77`
+
+### Revert
+
+如果当前 commit 是用来撤销之前的 commit，则必须以 `revert:` 开头，后面跟着被撤销的 commit 的 header 
+
+body 部分则必须写成 `This  reverts commit 667ecc1654a317a13331b17617d973392f415f02.`
+
+## 规则
+
+优秀的 commit massage 应该遵循以下七条规则：
+
+1. subject 和 body 之间空一行
+2. subject字数限制在50字符以内
+3. 行首字母大写
+4. subject 不要以句号结尾
+5. subject 使用祈使句
+6. body 不超过72个字符
+7. 用 body 部分解释此次 commit 的改动及其原因
+
+## 示例
+
+`feat(lang): add polish language`
+
+`refactor!: drop support for Node 6 //使用感叹号代表 breaking change` 
+
+```
+fix: correct minor typos in code
+
+see the issue for details
+
+on typos fixed.
+
+Reviewed-by: Z
+Refs #133
+```
 
 # 参考资料
 
+[Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)
+
+[How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+
+[Understanding Semantic Commit Messages Using Git and Angular](https://nitayneeman.com/posts/understanding-semantic-commit-messages-using-git-and-angular/)
+
 [常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 
+[Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)

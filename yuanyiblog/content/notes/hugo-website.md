@@ -1,25 +1,25 @@
 ---
 title: "利用 Hugo 搭建网站"
-weight: 10
+weight: 70
 ---
 
-本篇笔记介绍了如何利用 Hugo 框架搭建网站并部署到 GitHub 上，以及我在建站过程中遇到的一些问题
+本篇笔记介绍了如何利用 Hugo 框架搭建网站并部署到 GitHub 上，以及我在建站过程中遇到的问题和解决办法
 
 # 快速开始
 
-## windows:
+## Windows:
     
 最简单的方法是直接下载 [最新版本的 hugo](https://github.com/gohugoio/hugo/releases) 安装
 
-直接安装 extended 版本，可以对 scss 文件进行编译，否则在之后使用模板时会出现问题
+请安装 extended 版本，可以对 scss 文件进行编译，否则在之后使用模板时会出现问题
 
 **注意：要把 hugo 的路径添加到环境变量 Path 中！**
 
-我在下载安装扩展版本的时候有点问题，最后重新用 [Chocolatey](https://gohugo.io/getting-started/installing/#chocolatey-windows) 安装成功
+我在下载安装扩展版本的时候有点问题，最后重新用 [Chocolatey](https://gohugo.io/getting-started/installing/#chocolatey-windows) 安装成功，非常方便
 
 ## MacOS：
 
-`brew install hugo`
+[其它系统的安装过程可以看官网文档](https://gohugo.io/getting-started/installing/)
 
 ## 新建网站
 
@@ -75,6 +75,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Blog"
 
+#导航栏菜单
 [menu]
 [[menu.main]]
     identifier = "about"
@@ -97,9 +98,9 @@ title = "Blog"
 
 ### 现有主题模板的个性化
 
-在`themes`文件夹里主要修改 `assets` 和 `layouts` 两个文件夹，前者主要存放 css 和 js 文件，后者主要存放 html 文件
+`themes`文件夹里主要看 `assets` 和 `layouts` 两个文件夹，前者主要存放 css 和 js 文件，后者主要存放 html 文件
 
-`layouts` 文件夹里主要修改 `partials` 和 `shortcodes` 文件夹里的 html 文件
+`layouts` 文件夹里主要看 `partials` 和 `shortcodes` 两个文件夹
 
 ## 自己创建主题
 
@@ -115,19 +116,19 @@ title = "Blog"
 
 ## 把网站部署到 GitHub 上
 
-1. 在 GitHub 上创建一个新仓库，名字随便起（例如 blog），用于存放完整的代码。
+1. 在 GitHub 上创建一个新仓库 A ，名字随便起（例如 blog），该仓库用于存放完整的代码
 
-2. 创建另一个新仓库，起名为 `github_id.github.io` （例如 yuanyi-au.github.io ），该仓库用于网站部署
+2. 创建另一个新仓库 B ，起名为 `github_id.github.io` （例如 yuanyi-au.github.io ），该仓库用于网站部署
 
-3. 将本地代码与 GitHub 第一个仓库关联
+3. 将本地代码与 GitHub 上的仓库 A 关联
 
 4. 进入本地代码文件根目录：
 
-`git submodule add -b main <第二个仓库的地址> public` 
+    `git submodule add -b main <仓库 B 地址> public` 
 
-生成 `public` 文件夹并将其关联到第二个仓库上，push 之后可以在 GitHub 第二个仓库页面上看到 `public` 文件夹的内容
+生成 `public` 文件夹并将其关联到仓库 B 上，push 之后可以在 GitHub 仓库 B 的页面上看到 `public` 文件夹的内容
 
-5. 在第二个仓库的设置中可以找到 GitHub Pages，可以看到网站地址，也就是 `github_id.github.io`，就可以进行访问了
+5. 在仓库 B 的设置中可以找到 GitHub Pages，可以看到网站地址 `github_id.github.io`，就可以进行访问了
 
 **注意：`public` 文件夹的内容需要每次在项目根目录执行 `hugo` 命令后才会更新**
 
@@ -141,7 +142,7 @@ title = "Blog"
 
 问题描述：
 
-`hugo server` 在本地运行时没有任何问题，但部署上线后打开网页发现渲染缺失 css 和 js 文件
+`hugo server` 在本地运行时没有问题，但部署上线后打开网页发现渲染缺失 css 和 js 文件
 
 问题解决：
 
@@ -159,10 +160,22 @@ uglyURLs = true
 
 `baseURL = "\"`
 
+## 找不到新增的页面
+
+问题描述：
+
+增加的内容在 index 页面有链接，但点开却找不到页面
+
+问题解决：
+
+使用 `hugo -t theme_name` 代替 `hugo` 命令进行编译
+
 # 参考资料
 
-Hugo 官网上的视频教程，比较详细 [ YouTube Playlist ](https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
+[ Hugo - Static Site Generator | Tutorial ](https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
 
-如何创建自己的 Hugo 主题 [Creating your own Hugo Theme!](https://www.youtube.com/watch?v=wcMqrb3v2SM&list=LLm-KB0VAVChbSZPeDA_WqSg)
+[ Creating a Blog with Hugo and Github in 10 minutes ](https://www.youtube.com/watch?v=LIFvgrRxdt4&t=247s)
 
-如何把个人博客部署到 GitHub 上 [Creating a Blog with Hugo and Github in 10 minutes](https://www.youtube.com/watch?v=LIFvgrRxdt4&t=247s)
+[ Creating your own Hugo Theme! ](https://www.youtube.com/watch?v=wcMqrb3v2SM&list=LLm-KB0VAVChbSZPeDA_WqSg)
+
+[ Creating a Hugo Theme From Scratch ](https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/)
