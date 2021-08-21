@@ -20,9 +20,11 @@ git rebase a
 
 merge 采用的是三方合并的原则，没有公共提交节点就无法进行合并
 
-![git rebase](https://img-my.csdn.net/uploads/201206/14/1339683149_4793.jpg)
+git rebase:
+![](../images/git-rebase.jpg)
 
-![git merge](https://img-my.csdn.net/uploads/201206/14/1339682845_9921.jpg)
+git merge:
+![](../images/git-merge.jpg)
 
 rebase 和 merge 的另一个区别是 rebase 的冲突是一个一个解决，先解决第一个，然后用命令
 
