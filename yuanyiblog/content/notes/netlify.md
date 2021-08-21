@@ -7,7 +7,7 @@ Netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的�
 
 本篇笔记介绍了如何在 GitHub 上添加 Netlify 以便预览提交的 Pull Request 效果
 
-![](../images/netlify-bot.png)
+![](netlify-bot.png)
 
 也可以参考此笔记将自己的网站部署在 Netlify 上
 
@@ -31,7 +31,7 @@ Netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的�
 
 `Site settings > Build & deploy > Environment > Environment variables`
 
-![](../images/netlify-environment.png)
+![](netlify-environment.png)
 
 ## 修改域名
 
@@ -39,17 +39,17 @@ Netlify 会自动以你的 site name 生成一个域名：`[name-of-your-site].n
 
 进入 `Domain Setting > Domain management > Custom domains`，可以通过修改 site name 修改域名
 
-![](../images/netlify-domain.png)
+![](netlify-domain.png)
 
 # 为 PR 生成预览
 
 进入 `Site settings > Build & deploy > Deploy notifications`
 
-![](../images/netlify-notification.png)
+![](netlify-notification.png)
 
 选择 ”Add notification“ ，在下拉菜单中选择 “GitHub Pull Request Comment” ，然后选择 “Deploy Preview succeeded” ，保存
 
-![](../images/netlify-prcomment.png)
+![](netlify-prcomment.png)
 
 现在每个新出现的 PR 都会自动生成一个评论，包含预览链接 `deploy-preview-4--yoursitename.netlify.app`
 
