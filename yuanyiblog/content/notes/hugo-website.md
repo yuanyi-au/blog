@@ -41,13 +41,13 @@ weight: 70
 └── themes
 ```
 
-## `content` 文件夹
+## content 文件夹
 
 存放网站的主要内容 md 文件
 
 在该文件夹下的文件结构目录直接对应网站结构
 
-通常md文件开头如下（一般可以在 `archetypes` 文件夹中找到）：
+通常md文件开头如下（一般可以在 archetypes 文件夹中找到）：
 
 ```
 ---
@@ -57,19 +57,20 @@ draft: true
 ---
 ```
 
-除了 `title` 必需，其他可以省略
+除了 title 必需，其他可以省略
 
-## `layouts` 文件夹
+## layouts 文件夹
 
 存放网站 HTML 模板，包括 index、particials、single page、list pages 等
 
-## `themes`文件夹
+## themes文件夹
 
 存放现有的 Hugo 主题模板
 
-## `config.toml` 文件
+## config.toml 文件
 
 配置文件，最基础的设置如下：
+
 ```
 baseURL = "http://example.org/"
 languageCode = "en-us"
@@ -98,9 +99,9 @@ title = "Blog"
 
 ### 现有主题模板的个性化
 
-`themes`文件夹里主要看 `assets` 和 `layouts` 两个文件夹，前者主要存放 css 和 js 文件，后者主要存放 html 文件
+`themes` 文件夹里主要修改 `assets` 和 `layouts` 两个文件夹，前者存放 css 和 js 文件，后者存放 html 文件
 
-`layouts` 文件夹里主要看 `partials` 和 `shortcodes` 两个文件夹
+`layouts` 文件夹里主要修改 `partials` 和 `shortcodes` 两个文件夹里的 html 文件
 
 ## 自己创建主题
 
@@ -134,7 +135,7 @@ title = "Blog"
 
 ## 把网站部署到 Netlify 上
 
-可以参考这篇笔记 [使用 netlify 预览 GitHub 上的 PR]() ，不做最后一步就行啦
+可以参考这篇笔记 [使用 netlify 预览 GitHub 上的 PR](https://yuanyi-au.github.io/notes/netlify/) ，不做最后一步就行啦
 
 # 搭建过程中遇到的问题
 

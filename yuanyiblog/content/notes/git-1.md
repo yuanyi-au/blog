@@ -88,7 +88,7 @@ remote 远程仓库
 `git diff` 显示暂存区与工作区的差异
 
 
-# `commit message` 规范
+# commit message 规范
 
 ![不同的 commit message 规范](https://d33wubrfki0l68.cloudfront.net/eb16595d0c6862c0c013a36c339317a4d82bdce7/9195b/images/posts/2019-11-01-understanding-semantic-commit-messages-using-git-and-angular/conventions-diagram.png)
 

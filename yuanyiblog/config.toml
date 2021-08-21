@@ -1,7 +1,7 @@
 # baseURL = "http://yuanyi-au.github.io/"
 
 languageCode = "zh"
-title = "yuanyi 的博客"
+title = "yuanyi's blog"
 theme = "color-your-world"
 
 copyright = "Copyright © 2021, yuanyi; All rights reserved."
@@ -71,7 +71,7 @@ enableInlineShortcodes = true
     
     # Keep anchor links hidden until it's focused/hovered
     # The default is false
-    hideAnchors = true
+    hideAnchors = false
     
     # To make use of the custom Chroma, this should be true
     # and "noClasses" (at markup.highlight) should be false
