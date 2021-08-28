@@ -102,7 +102,7 @@ enableInlineShortcodes = true
 
   [[menu.main]]
   identifier = "posts"
-  name = "学习经验"
+  name = "经验闲聊"
   url = "/posts/"
   weight = 20
 
