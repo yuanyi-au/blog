@@ -16,15 +16,15 @@ git rebase a
 
 ## 与 merge 的区别
 
-***永远不要在公共项目里使用 rebase ***
+*永远不要在公共项目里使用 rebase*
 
 merge 采用的是三方合并的原则，没有公共提交节点就无法进行合并
 
 git rebase:
-![](git-rebase.jpg)
+![](../images/git-rebase.jpg)
 
 git merge:
-![](git-merge.jpg)
+![](../images/git-merge.jpg)
 
 rebase 和 merge 的另一个区别是 rebase 的冲突是一个一个解决，先解决第一个，然后用命令
 
