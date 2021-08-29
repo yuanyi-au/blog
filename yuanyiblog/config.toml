@@ -1,6 +1,5 @@
 # baseURL = "http://yuanyi-au.github.io/"
 relativeURLs = true
-uglyURLs = true
 
 languageCode = "zh"
 title = "yuanyi's blog"
