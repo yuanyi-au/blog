@@ -31,7 +31,7 @@ Netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的�
 
 `Site settings > Build & deploy > Environment > Environment variables`
 
-![](netlify-environment.png)
+![](../images/netlify-environment.png)
 
 ## 修改域名
 
