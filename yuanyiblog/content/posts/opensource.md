@@ -3,9 +3,11 @@ title: "开源入门之路"
 weight: 20
 ---
 
+# 开源入门之路
+
 今年夏天有幸参与了 OSPP 2021 这个活动，终于第一次真正接触到向往已久的开源，以这篇文章记录我在这条路上的旅程，希望能越走越远，以后有更多经验分享给大家。
 
-# 前言
+## 前言
 
 首先我想说的是，参与开源并不是必须贡献代码，文档写作、视觉设计、组织宣传等也是项目中非常重要的部分。以及在项目社区或者 GitHub Issues 里进行反馈和解答其他人提出的问题，这些都是对开源社区很好的贡献。
 
@@ -17,9 +19,9 @@ weight: 20
 
 最后一点，保持礼貌！
 
-# 参与项目的基本流程
+## 参与项目的基本流程
 
-## 找到你想要参与的项目
+### 找到你想要参与的项目
 
 如果毫无头绪，我认为最好从自己熟悉的项目开始下手。在之前做项目的过程中肯定用过许多其他工具，在 GitHub 上搜索它们的项目仓库会是一个不错的开始。当然你也可以通过 GitHub 的 [Explore](https://github.com/explore/) 板块，或者 [Open Source Friday](https://opensourcefriday.com/) 之类的网站来寻找项目。
 
@@ -27,7 +29,7 @@ weight: 20
 
 较大的开源项目都会有 CONTRIBUTING 文档，用来说明如何为项目做贡献，请仔细阅读。
 
-## 看看 `Issues` 都有些什么
+### 看看 `Issues` 都有些什么
 
 很多开源项目在 Issues 板块都会有 `good first issue` ，这些 Issue 通常都比较容易上手，有的项目负责人还会给出一些参考指引，是为了让第一次参与该项目的贡献者能够快速熟悉和参与到项目中来。
 
@@ -39,7 +41,7 @@ weight: 20
 - 用文字描述，方便其他人检索
 - 做好标签分类
 
-## Pull Request 基本流程
+### Pull Request 基本流程
 
 如果你对项目里的一些问题有了解决方案，可以通过 pull request 提交代码
 
@@ -50,19 +52,19 @@ weight: 20
 5. 把改好的代码推送到自己的远程仓库
 6. 在 GitHub 自己的仓库页面上就可以看到 `New pull request` 按钮
 
-## 等待 review 结果
+### 等待 review 结果
 
 项目维护者会对你提交的代码进行 review，如果你提交的代码存在问题，对方会做出说明，希望调整代码或者是代码不被接受的原因。如果没有问题，你的代码就将会被 merge 到项目源码里，一次贡献就这样完成了！
 
 如果你的 PR 暂时没有得到回应，请耐心等待，如果时间超过一周，可以尝试 @ 相关负责人。
 
-# 参与到开源社区中
+## 参与到开源社区中
 
 如果你对某个社区产生兴趣想要参与，在社区的官网或者 GitHub 上都能找到联系方式（比如 邮件列表、Slack、SIG 会议）。
 
 SIG (Special Interest Group) ：很多社区会定期举办 SIG 会议，不要害怕参与进去。一般来说社区会维护每次 SIG 会议的会议文档以及会议录屏，也可以通过这些方式了解社区或者项目的动态。
 
-# GitHub 上常见的交流缩写
+## GitHub 上常见的交流缩写
 
 - WIP：Work in progress, do not merge yet.  // 开发中
 - LGTM：Looks good to me.  // PR 经过 review 没有问题
@@ -71,7 +73,7 @@ SIG (Special Interest Group) ：很多社区会定期举办 SIG 会议，不要�
 - ACK：acknowledgement.
 - NACK/NAK：negative acknowledgement. 
 
-# 开源指南
+## 开源指南
 
 [GitHub 开源软件指南](https://opensource.guide/zh-hans/)
 

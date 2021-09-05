@@ -3,6 +3,8 @@ title: "使用 Netlify 部署个人网站以及预览 GitHub 上的 PR"
 weight: 200
 ---
 
+# 使用 Netlify 部署个人网站以及预览 GitHub 上的 PR
+
 Netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的云平台
 
 本篇笔记介绍了如何在 GitHub 上添加 Netlify 以便预览提交的 Pull Request 效果
@@ -11,21 +13,21 @@ Netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的�
 
 也可以参考此笔记将自己的网站部署在 Netlify 上
 
-# 安装准备
+## 安装准备
 
 在 GitHub 上安装 [ Netlify ](https://github.com/apps/netlify)，授权 GitHub 账号
 
 或者你也可以选择在 [Netlify 官网](https://www.netlify.com/) 上进行注册授权
 
-# New site from Git
+## New site from Git
 
 选择平台 - 选择仓库 - 选择分支 - 基本设置 - deploy site
 
-## 基本设置
+### 基本设置
 
 常见框架对应的 Build command 和 Publish directory 可以看 [官网文档](https://docs.netlify.com/configure-builds/common-configurations/)
 
-## 环境变量
+### 环境变量
 
 如果第一次 deploy 失败，请查看环境设置，检查版本是否正确
 
@@ -33,7 +35,7 @@ Netlify 是一个可以用来构建、部署、协作处理 Web 应用程序的�
 
 ![](../images/netlify-environment.png)
 
-## 修改域名
+### 修改域名
 
 Netlify 会自动以你的 site name 生成一个域名：`[name-of-your-site].netlify.app`
 
@@ -41,7 +43,7 @@ Netlify 会自动以你的 site name 生成一个域名：`[name-of-your-site].n
 
 ![](../images/netlify-domain.png)
 
-# 为 PR 生成预览
+## 为 PR 生成预览
 
 进入 `Site settings > Build & deploy > Deploy notifications`
 
@@ -53,11 +55,11 @@ Netlify 会自动以你的 site name 生成一个域名：`[name-of-your-site].n
 
 现在每个新出现的 PR 都会自动生成一个评论，包含预览链接 `deploy-preview-4--yoursitename.netlify.app`
 
-# 对开源项目的支持
+## 对开源项目的支持
 
 如果是开源项目，可以阅读 [Open Source Plan Policy](https://www.netlify.com/legal/open-source-policy) 相关内容，提交申请表单，就能免费享有 Pro 的功能，团队成员数量无限制
 
-# 参考资料
+## 参考资料
 
 [ Netlify 官网文档](https://docs.netlify.com/site-deploys/deploy-previews/)
 
