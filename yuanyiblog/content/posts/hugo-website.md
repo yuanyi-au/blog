@@ -1,6 +1,13 @@
 ---
 title: "利用 Hugo 搭建网站"
-weight: 70
+date: 2021-08-06
+description: ""
+tags: [hugo, blog]
+featured_image: ""
+images: []
+categories: Hugo
+comment: true
+draft: false
 ---
 
 # 利用 Hugo 搭建网站

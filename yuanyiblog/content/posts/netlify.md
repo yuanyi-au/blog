@@ -1,6 +1,14 @@
 ---
 title: "使用 Netlify 部署个人网站以及预览 GitHub 上的 PR"
-weight: 200
+date: 2021-08-17
+description: ""
+tags: [deploy, blog]
+featured_image: ""
+# images is optional, but needed for showing Twitter Card
+images: []
+categories: 前端工具
+comment: true
+draft: false
 ---
 
 # 使用 Netlify 部署个人网站以及预览 GitHub 上的 PR

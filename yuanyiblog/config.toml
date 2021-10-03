@@ -1,112 +1,55 @@
-# baseURL = "http://yuanyi-au.github.io/"
-relativeURLs = true
+baseURL = "https://yuanyi-au.github.io/"
+DefaultContentLanguage = "zh"
+languageCode = "en-us"
+title = "垃圾回收站"
+copyright = "2021 Yuanyi. All rights reserved."
+theme = "diary"
+# googleAnalytics = "UA-123-45"
 
-languageCode = "zh"
-title = "yuanyi's blog"
-theme = "color-your-world"
-
-copyright = "Copyright © 2021, yuanyi; All rights reserved."
-
-enableEmoji = true
-enableInlineShortcodes = true
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "perldoc"
+    tabWidth = 4
 
 [params]
-  
-  # Site description
-  description = "yuanyi 的个人博客"
-  
-  # Author
-  author = "yuanyi"
-  
-  [params.contact]
-    
-    # formspree.io Form ID
-    formspreeFormId = "xqkwdoba"
-    
-    # Autocomplete [on/off] and min character length for message
-    autoComplete      = false # Default is false
-    messageMinLength  = 10   # Default is 140
-    
-    # Subject
-    # You can set a single value below (and it will cease to be a dropdown),
-    # BUT KEEP IT AS AN ARRAY
-    # It can also be disabled entirely (and it will turn into a text field)
-    subject = [ '打个招呼!', "有个问题?" ]
+subtitle = "yuanyi's blog"
+enableGitalk = true
 
-    # Text placeholders. As usual, comment the lines if you don't want use them
-    # The "subject" below will only be used if the "subject" above doesn't exist (ie.: commented/deleted)
-    [params.contact.placeholder]
-      name    = "ABC 的朋友！"
-      email   = "abc123@mail.com"
-      subject = '打个招呼!'
-      message = "随便写点什么...很乐意和你交流！"
-  
-  [params.style]
-  
-    # Dark mode as default
-    # User preferences (site/system settings) will still have priority over it
-    # The default is false
-    isDark = true
+# Twitter Card and Open Graph settings
+enableOpenGraph = true
+enableTwitterCards = true
+title = "My Blog" # will set 'og:site_name'
+description = "yuanyi 的个人博客"  # will set 'og:description'
 
-    # Disable the use of system settings (prefers-color-scheme)
-    # The default is false
-    ignoreSystemSettings = true
+[params.gitalk]
+  owner = "yuanyi-au"
+  repo = "gitalk-comments"
+  client_id = "df402f42b44a5132782e"
+  client_secret = "91abb6d2335e7f2ea53a51b42eda9f6b332f283c"
+[taxonomies]
+   tag = "tags"
+   category = "categories"
 
-    # Accent colors for dark and light mode respectively
-    darkAccent   = "#1dbc91" # Default is "#1dbc91"
-    lightAccent  = "#1f676b" # Default is "#1f676b"
-
-    # More colors, pick as many as you want (not really sure if there's a limit)
-    # Apparently these may not show up on every modern browser (ie. Firefox)
-    # There's no default value. Used here just as example
-    presets = [ "#225670", "#dd587c", "#902b37", "#f3a530", "#754e85", "#7fc121", "#a8314a", "#ff7433", "#3e6728", "#c063bd" ]
-
-    # Use an icon or text for footnote return links
-    # The default is false
-    hasIconAsFootnoteReturnLink = true
-    
-    # For the social shortcode
-    # Use flexbox (with flex-grow) or grid (equal width)
-    # The default is false
-    socialIsFlex = true
-    
-    # Keep anchor links hidden until it's focused/hovered
-    # The default is false
-    hideAnchors = false
-    
-    # To make use of the custom Chroma, this should be true
-    # and "noClasses" (at markup.highlight) should be false
-    # The default is true
-    useCustomChroma = true
-
-    # CSS animation transition when changing colors
-    # The default is ".5s ease"
-    changeTransition = ".3s ease"
-    
-    
-  # For a simple 404
-  [params.notFound]
-    title         = "Page not found"
-    description   = "This page was not found."
-    paragraph     = "Nothing to see here, buddy."
-
-  
-[menu]
-
-  [[menu.main]]
-  identifier = "notes"
-  name = "技术总结"
-  url = "/notes/"
-  weight = 10
-
-  [[menu.main]]
-  identifier = "posts"
-  name = "经验闲聊"
-  url = "/posts/"
-  weight = 20
-
-  [[menu.main]]
-  identifier = "about"
-  name = "关于我"
-  url = "/about/"
-  weight = 30
+[[menu.main]]
+url = "/posts"
+name = "文章"
+weight = 1
+[[menu.main]]
+url = "/categories"
+name = "分类"
+weight = 2
+[[menu.main]]
+url = "/tags"
+name = "标签"
+weight = 3
+[[menu.main]]
+url = "/about"
+name = "关于"
+weight = 4

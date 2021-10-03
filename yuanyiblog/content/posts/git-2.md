@@ -1,6 +1,13 @@
 ---
 title: "git 笔记 (2)"
-weight: 50
+date: 2021-07-26
+description: ""
+tags: [git]
+featured_image: ""
+images: []
+categories: Git
+comment: true
+draft: false
 ---
 
 # git 笔记 (2)

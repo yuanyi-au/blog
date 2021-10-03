@@ -1,6 +1,12 @@
 ---
 title: "浏览器基本原理"
-weight: 30
+date: 2021-10-01
+description: ""
+tags: [browser]
+featured_image: ""
+images: []
+categories: 前端
+comment: true
 draft: true
 ---
 
