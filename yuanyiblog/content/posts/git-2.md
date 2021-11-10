@@ -2,10 +2,10 @@
 title: "git 笔记 (2)"
 date: 2021-07-26
 description: ""
-tags: [git]
+tags: [Git]
 featured_image: ""
 images: []
-categories: Git
+categories: 技术
 comment: true
 draft: false
 ---

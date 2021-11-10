@@ -2,10 +2,10 @@
 title: "git 笔记 (1)"
 date: 2021-07-24
 description: ""
-tags: [git]
+tags: [Git]
 featured_image: ""
 images: []
-categories: Git
+categories: 技术
 comment: true
 draft: false
 ---
@@ -145,7 +145,10 @@ commit message 包括三部分：header，body 和 footer
 
 如果当前 commit 是用来撤销之前的 commit，则必须以 `revert:` 开头，后面跟着被撤销的 commit 的 header 
 
-body 部分则必须写成 `This  reverts commit 667ecc1654a317a13331b17617d973392f415f02.`
+body 部分则必须写成:
+ ```
+ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
+ ```
 
 ### 规则
 
@@ -161,9 +164,13 @@ body 部分则必须写成 `This  reverts commit 667ecc1654a317a13331b17617d9733
 
 ### 示例
 
-`feat(lang): add polish language`
+```
+feat(lang): add polish language
+```
 
-`refactor!: drop support for Node 6 //使用感叹号代表 breaking change` 
+```
+refactor!: drop support for Node 6 //使用感叹号代表 breaking change
+``` 
 
 ```
 fix: correct minor typos in code

@@ -4,11 +4,10 @@ date: 2021-10-01
 description: ""
 tags: []
 featured_image: ""
-# images is optional, but needed for showing Twitter Card
 images: []
-categories: 转码
+categories:
 comment: true
-draft: false
+draft: true
 ---
 
 # 学习历程

@@ -1,10 +1,11 @@
 baseURL = "https://yuanyi-au.github.io/"
 DefaultContentLanguage = "zh"
 languageCode = "en-us"
-title = "垃圾回收站"
+title = "方圆之所"
 copyright = "2021 Yuanyi. All rights reserved."
 theme = "diary"
 # googleAnalytics = "UA-123-45"
+
 
 [markup]
   [markup.highlight]
@@ -20,7 +21,7 @@ theme = "diary"
 
 [params]
 subtitle = "yuanyi's blog"
-enableGitalk = true
+enableGitalk = false
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true

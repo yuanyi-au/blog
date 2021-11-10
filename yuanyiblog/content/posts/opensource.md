@@ -2,10 +2,10 @@
 title: "开源入门之路"
 date: 2021-08-20
 description: ""
-tags: [opensource]
+tags: [开源]
 featured_image: ""
 images: []
-categories: 开源
+categories: 技术
 comment: true
 draft: false
 ---
