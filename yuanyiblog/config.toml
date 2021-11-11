@@ -21,7 +21,7 @@ theme = "diary"
 
 [params]
 subtitle = "yuanyi's blog"
-enableGitalk = false
+enableGitalk = true
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
@@ -31,9 +31,10 @@ description = "yuanyi 的个人博客"  # will set 'og:description'
 
 [params.gitalk]
   owner = "yuanyi-au"
-  repo = "gitalk-comments"
-  client_id = "df402f42b44a5132782e"
-  client_secret = "91abb6d2335e7f2ea53a51b42eda9f6b332f283c"
+  repo = "yuanyi-au.github.io"
+  client_id = "fcc1b570c7a27241f68a"
+  client_secret = "d8b4cb63950ea0a6f1776492d9b9261b7e9c94c9"
+  admin = "yuanyi-au"
 [taxonomies]
    tag = "tags"
    category = "categories"
